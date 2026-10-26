@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><title>IMTS Options</title>
+<style>
+body{font-family:Arial;background:#0b1220;color:#fff;margin:0}
+.wrap{max-width:760px;margin:24px auto;padding:0 14px}
+.card{background:#111827;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+.row{margin:12px 0}
+label{display:block;font-weight:900;margin-bottom:6px}
+input{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0b1220;color:#fff}
+.muted{color:#94a3b8;font-size:12px;line-height:1.4}
+.btn{border:0;border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:900;background:#3b82f6;color:#071226}
+.smallbtn{border:0;border-radius:10px;padding:8px 10px;cursor:pointer;font-weight:800;background:#10b981;color:#06261c}
+code{background:#0b1220;border:1px solid rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+</style></head><body>
+<div class="wrap">
+  <h2>IMTS Screen Capture - Options (Company Build)</h2>
+  <div class="card">
+    <div class="row">
+      <label>Server Upload URL</label>
+      <input id="serverUrl">
+      <div class="muted">Default is prefilled.</div>
+    </div>
+
+    <div class="row">
+      <label>Device UID (auto-generated)</label>
+      <input id="deviceUid" disabled>
+    </div>
+
+    <div class="row">
+      <label>Device Key (auto-saved after first enroll)</label>
+      <input id="deviceKey" placeholder="auto">
+    </div>
+
+    <div class="row">
+      <label>Enroll Token (auto-filled)</label>
+      <input id="enrollToken">
+      <div class="muted">Auto-filled in this company build. Must match server ENROLL_TOKEN.</div>
+    </div>
+
+    <div class="row">
+      <label>System Name (optional)</label>
+      <input id="systemName" placeholder="IMTS-ChromeOS-01">
+    </div>
+
+    <button class="btn" id="saveBtn">Save</button>
+    <button class="smallbtn" id="testBtn" style="margin-left:10px">Test Upload</button>
+
+    <div id="msg" class="muted" style="margin-top:10px"></div>
+  </div>
+</div>
+<script src="options.js"></script>
+</body></html>

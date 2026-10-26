@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><title>IMTS</title>
+<style>
+body{font-family:Arial;margin:0;padding:12px;width:360px;background:#0b1220;color:#fff}
+.card{background:#111827;border-radius:14px;padding:12px;border:1px solid rgba(255,255,255,.08)}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;margin:10px 0}
+.btn{border:0;border-radius:12px;padding:10px 12px;cursor:pointer;font-weight:800}
+.primary{background:#10b981;color:#06261c}
+.danger{background:#ef4444;color:#2b0b0b}
+.ghost{background:#1f2937;color:#e5e7eb}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.muted{color:#94a3b8;font-size:12px;line-height:1.35}
+.pill{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:800}
+.on{background:#10b981;color:#06261c}
+.off{background:#334155;color:#e2e8f0}
+hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:10px 0}
+</style></head>
+<body>
+<div class="card">
+  <div class="row">
+    <div>
+      <div style="font-weight:900;font-size:14px">IMTS Screen Capture</div>
+      <div class="muted">Interval: <b>5 min</b> • Visible tab area only</div>
+    </div>
+    <span id="statePill" class="pill off">OFF</span>
+  </div>
+
+  <div id="cfgWarn" class="muted" style="display:none;background:#0b1220;border:1px solid rgba(255,255,255,.1);padding:8px;border-radius:12px">
+    Not configured. Click <b>Options</b>.
+  </div>
+
+  <label style="display:flex;gap:10px;align-items:flex-start;margin-top:10px">
+    <input id="agree" type="checkbox" style="width:auto;margin-top:3px">
+    <span class="muted">
+      I agree this will capture screenshots of my <b>current browser tab</b> every 5 minutes while ON,
+      upload to IMTS server, and show badge ON. I can stop anytime.
+    </span>
+  </label>
+
+  <div class="row">
+    <button id="startBtn" class="btn primary" style="flex:1">Start</button>
+    <button id="stopBtn" class="btn danger" style="flex:1">Stop</button>
+  </div>
+
+  <div class="row">
+    <button id="optBtn" class="btn ghost" style="flex:1">Options</button>
+    <button id="capBtn" class="btn ghost" style="flex:1">Capture Now</button>
+  </div>
+
+  <hr>
+  <div class="muted">Status: <span id="statusText">—</span></div>
+  <div class="muted">Device UID: <span id="duid">—</span></div>
+  <div class="muted">Last upload: <span id="lastUpload">—</span></div>
+</div>
+<script src="popup.js"></script>
+</body></html>

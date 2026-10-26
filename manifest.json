@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "IMTS Screen Capture (Company Build)",
+  "version": "1.1.0",
+  "description": "IMTS internal visible-tab capture every 5 minutes. Auto UID and auto-enroll token filled.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IMTS Screen Capture"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "idle"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
